@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sashirō Sushi - Autentyczny Smak Japonii</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header__sticky-wrapper">
+      <header class="header">
+        <div class="header__content-wrapper">
+          <a href="#" class="header__logo">サシ<br />ロウ</a>
+          <nav class="header__nav" id="main-nav">
+            <ul>
+              <li>
+                <a href="#" class="header__nav-link">Home</a>
+              </li>
+              <li><a href="#about" class="header__nav-link">O Nas</a></li>
+              <li>
+                <a href="#menu-sections" class="header__nav-link">Menu</a>
+              </li>
+              <li>
+                <a href="#contact-reservation" class="header__nav-link"
+                  >Rezerwacja</a
+                >
+              </li>
+              <li>
+                <a href="#service" class="header__nav-link">Lokalizacje</a>
+              </li>
+              <li>
+                <a href="#contact-info" class="header__nav-link">Kontakt</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__hamburger" id="hamburger-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+
+          <div class="header__controls">
+            <button
+              id="theme-toggle"
+              class="header__theme-toggle"
+              aria-label="Zmień motyw"
+            >
+              <i class="fas fa-sun"></i>
+            </button>
+            <div class="header__lang-selector">
+              <a href="#" class="header__lang-selector-option" data-lang="en"
+                >EN</a
+              >
+              <a
+                href="#"
+                class="header__lang-selector-option header__lang-selector-option--active"
+                data-lang="pl"
+                >PL</a
+              >
+            </div>
+            <div class="header__cart-icon">
+              <a href="cart.html"
+                ><i class="fas fa-shopping-cart"></i
+                ><span class="header__cart-badge" id="cart-item-count">0</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <section class="hero section" id="hero">
+      <div class="hero__text">
+        <h1 class="hero__text-heading">
+          Sashirō Sushi. <span>Sztuka Smaku.</span>
+        </h1>
+        <p class="hero__text-paragraph">
+          Odkryj autentyczną japońską kuchnię, mistrzowsko przygotowaną przez
+          naszych Shokunin. Świeżość, tradycja i pasja w każdym kęsie. Czekamy
+          na Twoje zamówienie!
+        </p>
+        <a href="#menu-sections" class="btn">Przejrzyj Menu</a>
+      </div>
+
+      <div class="hero__image">
+        <div class="sushi-plate">
+          <img
+            src="images/shusi_baner.png"
+            alt="Elegancki zestaw sushi na talerzu"
+          />
+        </div>
+      </div>
+    </section>
+    <main>
+      <section class="about section" id="about">
+        <h2 class="section__title">
+          Tworzymy dobre i <span class="colored">prawdziwe</span> smaki
+        </h2>
+        <div class="about__content">
+          <img
+            src="images/about.jpg"
+            alt="Szef kuchni przygotowujący sushi"
+            class="about__chef-image about__chef-image--no-margin"
+          />
+          <div class="about__text">
+            <p>
+              Nasza filozofia opiera się na
+              <strong>szacunku do składników</strong> i
+              <strong>japońskiej tradycji</strong>. Każda rolka, każde nigiri
+              jest efektem wieloletniej praktyki i pasji. Korzystamy wyłącznie z
+              najwyższej jakości ryb, prosto od sprawdzonych dostawców, by
+              zapewnić Ci niezapomniane kulinarnie doświadczenie. Sashirō to nie
+              tylko jedzenie – to podróż do serca Japonii.
+            </p>
+            <a href="#contact-reservation" class="btn">Zarezerwuj Stolik</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="hr__bg-white section">
+        <hr />
+      </section>
+
+      <section class="testimonials section" id="testimonials">
+        <h2 class="section__title">Co mówią o nas <span>Klienci</span></h2>
+        <div class="testimonial__carousel">
+          <div class="testimonial__card">
+            <p class="testimonial__quote">
+              "Niesamowite sushi! Świeże składniki, perfekcyjnie przygotowane.
+              Prawdziwa uczta dla podniebienia."
+            </p>
+            <p class="testimonial__author">- Anna Kowalska</p>
+          </div>
+          <div class="testimonial__card">
+            <p class="testimonial__quote">
+              "Moje ulubione miejsce na ramen w mieście. Bulion jest po prostu
+              boski, a makaron idealnie al dente."
+            </p>
+            <p class="testimonial__author">- Piotr Nowak</p>
+          </div>
+          <div class="testimonial__card">
+            <p class="testimonial__quote">
+              "Zawsze wracam po zestawy. Super jakość i rewelacyjne smaki.
+              Obsługa też zawsze na plus."
+            </p>
+            <p class="testimonial__author">- Katarzyna Dąbrowska</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu section" id="menu-sections">
+        <h2 class="section__title" id="main-menu-title">
+          Odkryj Nasze <span>Kategorie</span>
+        </h2>
+
+        <ul class="menu__categories" id="menu-categories-bar">
+          <li>
+            <a
+              href="#"
+              class="menu__categories-link menu__categories-link--active"
+              data-category="all"
+              >Wszystko</a
+            >
+          </li>
+          <li>
+            <a
+              href="#set-category"
+              class="menu__categories-link"
+              data-category="set"
+              >Zestawy Sushi</a
+            >
+          </li>
+          <li>
+            <a
+              href="#maki-category"
+              class="menu__categories-link"
+              data-category="maki"
+              >Maki</a
+            >
+          </li>
+          <li>
+            <a
+              href="#nigiri-category"
+              class="menu__categories-link"
+              data-category="nigiri"
+              >Nigiri</a
+            >
+          </li>
+          <li>
+            <a
+              href="#gyoza-category"
+              class="menu__categories-link"
+              data-category="gyoza"
+              >Gyoza</a
+            >
+          </li>
+          <li>
+            <a
+              href="#ramen-category"
+              class="menu__categories-link"
+              data-category="ramen"
+              >Ramen</a
+            >
+          </li>
+        </ul>
+        <div id="menu-categories-placeholder"></div>
+        <div class="menu__category-group" data-group="set">
+          <h2 id="set-category" class="menu__category-title">
+            🍣 Zestawy Sushi
+          </h2>
+          <div class="menu__grid" data-category-type="set">
+            <div class="menu__card" data-product-id="set-1">
+              <div class="menu__card-image-wrapper">
+                <img src="images/FRESH SET.jpg" alt="Fresh Set Sushi" />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">FRESH SET (22 kawałki)</h3>
+                <p>
+                  Idealny na początek, z łososiem i tuńczykiem.
+                  <span class="colored">49.99 zł</span>
+                </p>
+              </div>
+            </div>
+            <div class="menu__card" data-product-id="set-2">
+              <div class="menu__card-image-wrapper">
+                <img src="images/FUTO.jpg" alt="Futo's Maki set" />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">FUTO'S MAKI (28 kawałków)</h3>
+                <p>
+                  Duże rolki futomaki z chrupiącą krewetką.
+                  <span class="colored">65.00 zł</span>
+                </p>
+              </div>
+            </div>
+            <div class="menu__card" data-product-id="set-3">
+              <div class="menu__card-image-wrapper">
+                <img
+                  src="images/CALIFORNIA.jpg"
+                  alt="California Love Sushi set"
+                />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">CALIFORNIA LOVE (25 kawałków)</h3>
+                <p>
+                  Klasyczny zestaw uramaki z awokado i surimi.
+                  <span class="colored">59.50 zł</span>
+                </p>
+              </div>
+            </div>
+            <div class="menu__card" data-product-id="set-4">
+              <div class="menu__card-image-wrapper">
+                <img src="images/PREMIUM.jpg" alt="Premium Gold Sushi set" />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">PREMIUM GOLD (30 kawałków)</h3>
+                <p>
+                  Ekskluzywna selekcja nigiri i hosomaki.
+                  <span class="colored">89.99 zł</span>
+                </p>
+              </div>
+            </div>
+            <div class="menu__card" data-product-id="set-5">
+              <div class="menu__card-image-wrapper">
+                <img src="images/VEGE HARU.jpg" alt="Vege Haru Set sushi" />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">VEGE HARU SET (18 kawałków)</h3>
+                <p>
+                  Świeże smaki: ogórek, rzodkiew, awokado.
+                  <span class="colored">39.00 zł</span>
+                </p>
+              </div>
+            </div>
+            <div class="menu__card" data-product-id="set-6">
+              <div class="menu__card-image-wrapper">
+                <img
+                  src="images/shusi FAMILY PARTY.jpg"
+                  alt="Family Party Sushi set"
+                />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">FAMILY PARTY (50 kawałków)</h3>
+                <p>
+                  Idealny dla 4-5 osób, miks hitów Sashirō.
+                  <span class="colored">149.00 zł</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__category-group" data-group="maki">
+          <h2 id="maki-category" class="menu__category-title">🥢 Maki</h2>
+          <div class="menu__grid" data-category-type="maki">
+            <div class="menu__card" data-product-id="maki-1">
+              <div class="menu__card-image-wrapper">
+                <img
+                  src="images/maki HOSOMAKI SAKE.jpg"
+                  alt="Hosomaki Sake rolls"
+                />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">HOSOMAKI SAKE (6 kawałków)</h3>
+                <p>
+                  Klasyczne, małe rolki z łososiem.
+                  <span class="colored">12.00 zł</span>
+                </p>
+              </div>
+            </div>
+            <div class="menu__card" data-product-id="maki-2">
+              <div class="menu__card-image-wrapper">
+                <img
+                  src="images/maki FUTOMAKI TEMPURA.jpg"
+                  alt="Futomaki Tempura roll"
+                />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">FUTOMAKI TEMPURA (6 kawałków)</h3>
+                <p>
+                  Duża rolka z rybą w chrupiącą panierce tempura.
+                  <span class="colored">28.00 zł</span>
+                </p>
+              </div>
+            </div>
+            <div class="menu__card" data-product-id="maki-3">
+              <div class="menu__card-image-wrapper">
+                <img
+                  src="images/maki SPICY TUNA.jpg"
+                  alt="Spicy Tuna Maki rolls"
+                />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">SPICY TUNA MAKI (6 kawałków)</h3>
+                <p>
+                  Tuńczyk marynowany w pikantnym sosie.
+                  <span class="colored">22.00 zł</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__category-group" data-group="nigiri">
+          <h2 id="nigiri-category" class="menu__category-title">🍣 Nigiri</h2>
+          <div class="menu__grid" data-category-type="nigiri">
+            <div class="menu__card" data-product-id="nigiri-1">
+              <div class="menu__card-image-wrapper">
+                <img
+                  src="images/NIGIRI SAKE 2.jpg"
+                  alt="Nigiri Sake (salmon)"
+                />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">NIGIRI SAKE (2 kawałki)</h3>
+                <p>
+                  Klasyczne nigiri z łososiem.
+                  <span class="colored">16.00 zł</span>
+                </p>
+              </div>
+            </div>
+            <div class="menu__card" data-product-id="nigiri-2">
+              <div class="menu__card-image-wrapper">
+                <img
+                  src="images/NIGIRI MAGURO 2.jpg"
+                  alt="Nigiri Maguro (tuna)"
+                />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">NIGIRI MAGURO (2 kawałki)</h3>
+                <p>
+                  Nigiri z tuńczykiem. <span class="colored">18.00 zł</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__category-group" data-group="gyoza">
+          <h2 id="gyoza-category" class="menu__category-title">🥟 Gyoza</h2>
+          <div class="menu__grid" data-category-type="gyoza">
+            <div class="menu__card" data-product-id="gyoza-3">
+              <div class="menu__card-image-wrapper">
+                <img
+                  src="images/GYOZA Z KREWETKAMI.jpg"
+                  alt="Gyoza with shrimp and asparagus"
+                />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">
+                  GYOZA Z KREWETKAMI I SZPARAGAMI (5 sztuk)
+                </h3>
+                <p>
+                  Krewetki, drobno siekane szparagi, czosnek, olej sezamowy.
+                  Parowane (delikatne i soczyste).
+                  <span class="colored">30.00 zł</span>
+                </p>
+              </div>
+            </div>
+            <div class="menu__card" data-product-id="gyoza-2">
+              <div class="menu__card-image-wrapper">
+                <img
+                  src="images/GYOZA Z KURCZAKIEM.jpg"
+                  alt="Gyoza with chicken and ginger"
+                />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">
+                  GYOZA Z KURCZAKIEM I IMBIRREM (5 sztuk)
+                </h3>
+                <p>
+                  Mielony kurczak, świeży imbir, szczypiorek, sos sojowy.
+                  Smażone (z chrupiącym spodem).
+                  <span class="colored">27.00 zł</span>
+                </p>
+              </div>
+            </div>
+            <div class="menu__card" data-product-id="gyoza-1">
+              <div class="menu__card-image-wrapper">
+                <img
+                  src="images/GYOZA WARZYWNA.jpg"
+                  alt="Gyoza with vegetables"
+                />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">GYOZA WARZYWNA (5 sztuk)</h3>
+                <p>
+                  Pierożki z warzywami, parowane lub smażone.
+                  <span class="colored">25.00 zł</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__category-group" data-group="ramen">
+          <h2 id="ramen-category" class="menu__category-title">🍜 Ramen</h2>
+          <div class="menu__grid" data-category-type="ramen">
+            <div class="menu__card" data-product-id="ramen-1">
+              <div class="menu__card-image-wrapper">
+                <img src="images/RAMEN CLASSIC.jpg" alt="Classic Ramen dish" />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">RAMEN CLASSIC</h3>
+                <p>
+                  Rosół wieprzowy, makaron, chashu, jajko.
+                  <span class="colored">39.00 zł</span>
+                </p>
+              </div>
+            </div>
+            <div class="menu__card" data-product-id="ramen-2">
+              <div class="menu__card-image-wrapper">
+                <img
+                  src="images/RAMEN SHOYU WEGE.jpg"
+                  alt="Shoyu Vegetarian Ramen dish"
+                />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">RAMEN SHOYU WEGE</h3>
+                <p>
+                  Rosół warzywny (klarowny, na bazie kombu i grzybów), makaron,
+                  tofu teriyaki, shitake, pak choi, kiełki fasoli mung. Shōyu
+                  (Sos sojowy, wegetariański).
+                  <span class="colored">36.00 zł</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="menu__card" data-product-id="ramen-3">
+              <div class="menu__card-image-wrapper">
+                <img
+                  src="images/RAMEN TANTAN Z MIĘSEM.jpg"
+                  alt="Tantan Ramen"
+                />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <div class="menu__card-content">
+                <h3 class="menu__card-title">RAMEN CLASSIC</h3>
+                <p>
+                  Rosół wieprzowy, makaron, chashu, jajko.
+                  <span class="colored">39.00 zł</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hr__bg-white section">
+        <hr />
+      </section>
+      <section class="section service" id="service">
+        <h2 class="section__title">Nasze <span>Usługi</span></h2>
+        <div class="service__grid">
+          <div class="service__card">
+            <i class="fas fa-truck service__icon"></i>
+            <h3>Szybka Dostawa</h3>
+            <p>
+              Dostarczymy Twoje zamówienie świeże i na czas. Sprawdź strefy
+              dostaw!
+            </p>
+          </div>
+
+          <div class="service__card">
+            <i class="service__icon fas fa-champagne-glasses"></i>
+            <h3>Przyjęcia i Eventy</h3>
+            <p>
+              Zorganizuj swoje przyjęcie z najlepszym sushi w mieście. Catering
+              dostępny.
+            </p>
+          </div>
+
+          <div class="service__card">
+            <i class="fas fa-map-marker-alt service__icon"></i>
+            <h3>Lokalizacje</h3>
+            <p>
+              Odwiedź naszą restaurację w centrum miasta. Zobacz mapę dojazdu.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="hr__bg-white section">
+        <hr />
+      </section>
+
+      <section class="contact section" id="contact-reservation">
+        <h2 class="section__title">Zarezerwuj <span>Stolik</span></h2>
+
+        <div class="contact__content contact__content--two-columns">
+          <div class="contact__form-wrapper">
+            <h3>Formularz Rezerwacji</h3>
+            <p>
+              Wypełnij poniższy formularz, a potwierdzimy Twoją rezerwację
+              mailowo lub telefonicznie w ciągu godziny.
+            </p>
+            <form class="reservation-form">
+              <div>
+                <label for="name">Imię i Nazwisko</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Jan Kowalski"
+                />
+              </div>
+              <div>
+                <label for="phone">Telefon kontaktowy</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="+48 123 456 789"
+                />
+              </div>
+
+              <div>
+                <label for="date">Data rezerwacji</label>
+                <input type="date" id="date" name="date" required />
+              </div>
+              <div>
+                <label for="time">Godzina</label>
+                <input
+                  type="time"
+                  id="time"
+                  name="time"
+                  required
+                  min="12:00"
+                  max="21:00"
+                />
+              </div>
+
+              <div>
+                <label for="people">Liczba osób</label>
+                <select id="people" name="people" required>
+                  <option value="1">1 osoba</option>
+                  <option value="2" selected>2 osoby</option>
+                  <option value="3">3 osoby</option>
+                  <option value="4">4 osoby</option>
+                  <option value="5">5 osób</option>
+                  <option value="6+">6+ (Prosimy o kontakt tel.)</option>
+                </select>
+              </div>
+              <div>
+                <label for="location">Lokalizacja</label>
+                <select id="location" name="location" required>
+                  <option value="Centrum">Centrum (ul. Długa 10)</option>
+                  <option value="Saska-Kępa">
+                    Saska Kępa (ul. Japońska 5)
+                  </option>
+                  <option value="Mokotow">Mokotów (al. Kwiatowa 7)</option>
+                </select>
+              </div>
+
+              <div class="form__full-width">
+                <label for="notes">Dodatkowe uwagi (opcjonalnie)</label>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  rows="3"
+                  placeholder="Alergie, wózek, prośba o konkretny stolik..."
+                ></textarea>
+              </div>
+
+              <button
+                type="button"
+                class="btn js-scroll-btn"
+                data-target="#contact-reservation"
+              >
+                ZAREZERWUJ STOLIK
+              </button>
+            </form>
+          </div>
+
+          <div class="contact__map-wrapper">
+            <h3>Znajdź nas na Mapie</h3>
+            <div class="map-placeholder">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.085347209325!2d21.006939615923976!3d52.23194017976865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc66938b8167%3A0x1d473a2169622a57!2sPa%C5%82ac%20Kultury%20i%20Nauki!5e0!3m2!1spl!2spl!4v1678280635105!5m2!1spl!2spl"
+                width="100%"
+                height="100%"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hr__bg-white section">
+        <hr />
+      </section>
+
+      <section class="service section" id="locations">
+        <h2 class="section__title">Nasze <span>Lokalizacje</span></h2>
+        <div class="service__list">
+          <div class="service__item">
+            <img
+              src="images/wnetrze restauracji shushi 1.jpg"
+              alt="Wnętrze restauracji"
+            />
+            <h3>Centrum (ul. Długa 10)</h3>
+            <p>Otwarta: 12:00 - 22:00</p>
+            <p>Telefon: <span class="colored">123 456 789</span></p>
+          </div>
+          <div class="service__item">
+            <img
+              src="images/wnetrze restauracji shushi 2.jpg"
+              alt="Nowoczesny wystrój kawiarni"
+            />
+            <h3>Saska Kępa (ul. Japonki 5)</h3>
+            <p>Otwarta: 13:00 - 21:00</p>
+            <p>Telefon: <span class="colored">987 654 321</span></p>
+          </div>
+          <div class="service__item">
+            <img
+              src="images/wnetrze restauracji shushi 3.jpg"
+              alt="Budynek restauracji"
+            />
+            <h3>Mokotów (al. Kwiatowa 7)</h3>
+            <p>Otwarta: 12:00 - 22:00</p>
+            <p>Telefon: <span class="colored">600 500 400</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="hr__bg-white section">
+        <hr />
+      </section>
+
+      <section class="contact section" id="contact-info">
+        <h2 class="section__title">
+          Masz pytania? <span>Skontaktuj się z nami</span>
+        </h2>
+        <div class="contact__content-wrapper">
+          <div class="contact__info-details contact__info-details--no-border">
+            <h3>Główne Dane Kontaktowe</h3>
+            <div class="footer__list">
+              <p>Adres centralny:</p>
+              <p>Sashirō Sushi HQ</p>
+              <p>ul. Główna 1, 00-001 Miasto</p>
+
+              <p>Telefon:</p>
+              <p>
+                <a href="tel:+48123456789" class="footer__list-link"
+                  >+48 123 456 789 (Zamówienia)</a
+                >
+              </p>
+              <p>
+                <a href="tel:+48999888777" class="footer__list-link"
+                  >+48 999 888 777 (Współpraca)</a
+                >
+              </p>
+
+              <p>E-mail:</p>
+              <p>
+                <a href="mailto:kontakt@sashiro.pl" class="footer__list-link"
+                  >kontakt@sashiro.pl</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="contact__logo-container">
+            <a href="#" class="header__logo header__logo--double-size"
+              >サシ<br />ロウ</a
+            >
+          </div>
+        </div>
+        <div class="contact__content contact__content--stacked">
+          <div class="newsletter-tile-wrapper">
+            <h3>Zapisz się do Newslettera!</h3>
+            <p>
+              Odbieraj najnowsze oferty, nowości i 10% rabatu na pierwsze
+              zamówienie.
+            </p>
+
+            <form class="newsletter-tile-form">
+              <input
+                type="email"
+                id="newsletter-email-tile"
+                name="newsletter-email"
+                required
+                placeholder="Wpisz swój e-mail..."
+              />
+              <button type="submit" class="btn">ZAPISZ MNIE</button>
+            </form>
+
+            <div class="consent">
+              <input
+                type="checkbox"
+                id="consent-tile"
+                name="consent-tile"
+                required
+              />
+              <label for="consent-tile">
+                Akceptuję
+                <a href="#">Politykę Prywatności</a>.
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer section" id="contact">
+      <div class="footer__column">
+        <h4 class="footer__heading">Sashirō Sushi</h4>
+        <p>Autentyczny Smak Japonii.<br />Tradycja, precyzja, jakość.</p>
+        <div class="footer__payments-icons">
+          <i class="fab fa-cc-visa" title="Visa"></i>
+          <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+          <i class="fab fa-cc-paypal" title="PayPal"></i>
+          <span class="blik-icon" title="Blik">BLIK</span>
+        </div>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__heading">Linki</h4>
+        <ul class="footer__list">
+          <li><a href="#hero" class="footer__list-link">Home</a></li>
+          <li><a href="#about" class="footer__list-link">O Nas</a></li>
+          <li><a href="#menu-sections" class="footer__list-link">Menu</a></li>
+          <li>
+            <a href="#contact-reservation" class="footer__list-link"
+              >Rezerwacja</a
+            >
+          </li>
+          <li><a href="#service" class="footer__list-link">Lokalizacje</a></li>
+          <li><a href="#contact-info" class="footer__list-link">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__heading">Kontakt i Godziny</h4>
+        <ul class="footer__list">
+          <li>
+            <a href="mailto:kontakt@sashiro.pl" class="footer__list-link"
+              >kontakt@sashiro.pl</a
+            >
+          </li>
+          <li>
+            <a href="tel:+48123456789" class="footer__list-link"
+              >+48 123 456 789</a
+            >
+          </li>
+          <li>ul. Długa 10, 00-001 Miasto</li>
+        </ul>
+        <div class="footer__hours">
+          <p><span class="colored">Godziny otwarcia:</span></p>
+          <p>Pon-Pt: 12:00 - 22:00</p>
+          <p>Sob-Nd: 13:00 - 23:00</p>
+        </div>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__heading">Informacje Prawne</h4>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__list-link">Regulamin</a></li>
+          <li>
+            <a href="#" class="footer__list-link">Polityka Prywatności</a>
+          </li>
+          <li><a href="#" class="footer__list-link">Dostawa i Płatności</a></li>
+        </ul>
+        <h4 class="footer__heading">Social Media</h4>
+        <div>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+    <div class="author-info">
+      <a
+        href="mailto:info@pixiart.pl?subject=Wiadomość ze strony Pixiart"
+      >
+        <p>info@pixiart.pl</p>
+      </a>
+      <a href="https://pixiart.pl" target="_blank"><p>pixiart.pl</p></a>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

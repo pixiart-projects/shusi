@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sashirō Sushi - Koszyk</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="cart-page">
+    <div class="header__sticky-wrapper">
+      <header class="header">
+        <div class="header__content-wrapper">
+          <a href="index.html" class="header__logo">サシ<br />ロウ</a>
+          <nav class="header__nav">
+            <ul>
+              <li>
+                <a href="index.html#" class="header__nav-link">Home</a>
+              </li>
+              <li>
+                <a href="index.html#about" class="header__nav-link">O Nas</a>
+              </li>
+              <li>
+                <a href="index.html#menu-sections" class="header__nav-link"
+                  >Menu</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#contact-reservation"
+                  class="header__nav-link"
+                  >Rezerwacja</a
+                >
+              </li>
+              <li>
+                <a href="index.html#service" class="header__nav-link"
+                  >Lokalizacje</a
+                >
+              </li>
+              <li>
+                <a href="index.html#contact-info" class="header__nav-link"
+                  >Kontakt</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="header__hamburger" id="hamburger-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+
+          <div class="header__controls">
+            <button
+              id="theme-toggle"
+              class="header__theme-toggle"
+              aria-label="Zmień motyw"
+            >
+              <i class="fas fa-sun"></i>
+            </button>
+            <div class="header__lang-selector">
+              <a href="#" class="header__lang-selector-option" data-lang="en"
+                >EN</a
+              >
+              <a
+                href="#"
+                class="header__lang-selector-option header__lang-selector-option--active"
+                data-lang="pl"
+                >PL</a
+              >
+            </div>
+            <div class="header__cart-icon">
+              <a href="cart.html"
+                ><i class="fas fa-shopping-cart"></i
+                ><span class="header__cart-badge" id="cart-item-count">0</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <main>
+      <section class="section cart__page">
+        <section class="menu section" id="cart-addons">
+          <h2 class="section__title">Proponowane <span>Dodatki</span></h2>
+          <p
+            class="section__subtitle"
+            style="
+              text-align: center;
+              margin-bottom: var(--spacing-l);
+              color: var(--color-text-muted);
+            "
+          >
+            Uzupełnij swoje zamówienie idealnymi dodatkami.
+          </p>
+          <div class="menu__grid" data-category-type="addons">
+            <div class="menu__card" data-product-id="addon-1">
+              <div class="menu__card-image-wrapper">
+                <img src="images/Sos Sojowy.jpg" alt="Sos Sojowy Premium" />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <h3 class="menu__card-title">Sos Sojowy Premium</h3>
+              <p>Japoński, fermentowany sos sojowy. 7.00 zł</p>
+            </div>
+            <div class="menu__card" data-product-id="addon-2">
+              <div class="menu__card-image-wrapper">
+                <img src="images/Marynowany Imbir.jpg" alt="Marynowany Imbir" />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <h3 class="menu__card-title">Marynowany Imbir (50g)</h3>
+              <p>Niezbędny do oczyszczania smaku. 5.00 zł</p>
+            </div>
+            <div class="menu__card" data-product-id="addon-3">
+              <div class="menu__card-image-wrapper">
+                <img src="images/Wasabi Extra.jpg" alt="Wasabi Extra" />
+              </div>
+              <span class="menu__card-cart">🛒</span>
+              <h3 class="menu__card-title">Wasabi Extra (15g)</h3>
+              <p>Świeżo tarte, bardzo ostre. 8.00 zł</p>
+            </div>
+          </div>
+        </section>
+        <section class="hr__bg-white section">
+          <hr />
+        </section>
+        <h2 class="section__title">Twój <span>Koszyk</span></h2>
+        <div class="cart__grid-layout">
+          <div class="cart__items-container">
+            <div class="cart__delivery-info">
+              <h3>Dostawa i Dane Kontaktowe</h3>
+              <form class="cart__form cart__form--delivery">
+                <label for="name">Imię i Nazwisko</label>
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  placeholder="Jan Kowalski"
+                />
+                <label for="phone">Telefon kontaktowy</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  required
+                  placeholder="+48 123 456 789"
+                />
+                <label for="address">Adres Dostawy (Ulica, nr)</label>
+                <input
+                  type="text"
+                  id="address"
+                  required
+                  placeholder="ul. Długa 10/2"
+                />
+                <label for="city">Miasto i Kod Pocztowy</label>
+                <input
+                  type="text"
+                  id="city"
+                  required
+                  placeholder="00-001 Miasto"
+                />
+                <div class="cart__delivery-options">
+                  <div class="cart__delivery-option">
+                    <input
+                      type="radio"
+                      id="courier"
+                      name="delivery-method"
+                      value="2.99"
+                      checked
+                    />
+                    <label for="courier"
+                      >Kurier (<span id="delivery-cost-display">2.99 zł</span
+                      >)</label
+                    >
+                  </div>
+                  <div class="cart__delivery-option">
+                    <input
+                      type="radio"
+                      id="pickup"
+                      name="delivery-method"
+                      value="0.00"
+                    />
+                    <label for="pickup">Odbiór Osobisty (0.00 zł)</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="cart__right-column">
+            <div class="cart__summary-box">
+              <div class="cart__summary">
+                <h3>Podsumowanie Zamówienia</h3>
+                <div class="cart__summary-line">
+                  <span>Wartość Produktów:</span>
+                  <span class="cart__summary-value" id="subtotal-value"
+                    >111.98 zł</span
+                  >
+                </div>
+                <div class="cart__summary-line">
+                  <span>Koszt Dostawy:</span>
+                  <span class="cart__summary-value" id="shipping-value"
+                    >2.99 zł</span
+                  >
+                </div>
+                <div class="cart__summary-line cart__summary-line--total">
+                  <span>RAZEM DO ZAPŁATY:</span>
+                  <span class="cart__summary-value" id="total-value"
+                    >114.97 zł</span
+                  >
+                </div>
+              </div>
+              <div class="cart__payment-section">
+                <h3>Metoda Płatności</h3>
+                <select id="payment-method" class="cart__input">
+                  <option value="bank-transfer">
+                    Przelew Natychmiastowy (Blik)
+                  </option>
+                  <option value="paypal">PayPal</option>
+                  <option value="cash">Gotówka przy Odbiorze/Dostawie</option>
+                </select>
+              </div>
+              <div class="cart__discount-section">
+                <label for="coupon" class="cart__label">Kupon Zniżkowy</label>
+                <div class="cart__coupon-input-group">
+                  <input
+                    type="text"
+                    id="coupon"
+                    placeholder="Wpisz kod kuponu"
+                    class="cart__input"
+                  />
+                  <button class="btn cart__coupon-btn">Zastosuj</button>
+                </div>
+              </div>
+              <button class="btn cart__place-order-btn">
+                ZŁÓŻ ZAMÓWIENIE Z OBOWIĄZKIEM ZAPŁATY
+              </button>
+              <p class="cart__terms-note">
+                Składając zamówienie, akceptujesz Regulamin i Politykę
+                Prywatności.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hr__bg-white section">
+        <hr />
+      </section>
+      <section id="quality-guarantee" class="section about">
+        <div class="about__content">
+          <h2 class="section__title">Gwarancja <span>Jakości</span></h2>
+          <div class="quality-grid">
+            <div class="quality-card">
+              <i class="quality-icon fas fa-leaf"></i>
+              <h3 class="quality-title">Świeżość składników</h3>
+              <p>
+                Składniki dostarczane są <span>codziennie</span> od zaufanych
+                dostawców. Gwarantujemy <strong>świeżość ryb</strong> i idealnie
+                ugotowany ryż.
+              </p>
+            </div>
+            <div class="quality-card">
+              <i class="quality-icon fas fa-star"></i>
+              <h3 class="quality-title">Bezkompromisowa jakość</h3>
+              <p>
+                Wszystkie potrawy są przygotowywane z
+                <strong>najwyższą starannością</strong>, bazując na tradycyjnych
+                recepturach. Bezpieczeństwo i satysfakcja są priorytetem.
+              </p>
+            </div>
+            <div class="quality-card">
+              <i class="quality-icon fas fa-utensils"></i>
+              <h3 class="quality-title">Autentyczny smak</h3>
+              <p>
+                Stawiamy na <strong>autentyczny japoński smak</strong>. Nasze
+                receptury są wierne tradycji, co czujesz w każdym kawałku.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hr__bg-white section">
+        <hr />
+      </section>
+      <section class="contact section" id="contact-info">
+        <h2 class="section__title">
+          Masz pytania? <span>Skontaktuj się z nami</span>
+        </h2>
+        <div class="contact__content-wrapper">
+          <div class="contact__info-details contact__info-details--no-border">
+            <h3>Główne Dane Kontaktowe</h3>
+            <div class="footer__list">
+              <p>Adres centralny:</p>
+              <p>Sashirō Sushi HQ</p>
+              <p>ul. Główna 1, 00-001 Miasto</p>
+              <p>Telefon:</p>
+              <p>
+                <a href="tel:+48123456789" class="footer__list-link"
+                  >+48 123 456 789 (Zamówienia)</a
+                >
+              </p>
+              <p>
+                <a href="tel:+48999888777" class="footer__list-link"
+                  >+48 999 888 777 (Współpraca)</a
+                >
+              </p>
+              <p>E-mail:</p>
+              <p>
+                <a href="mailto:kontakt@sashiro.pl" class="footer__list-link"
+                  >kontakt@sashiro.pl</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="contact__logo-container">
+            <a href="#" class="header__logo header__logo--double-size"
+              >サシ<br />ロウ</a
+            >
+          </div>
+        </div>
+        <div class="contact__content contact__content--stacked">
+          <div class="newsletter-tile-wrapper">
+            <h3>Zapisz się do Newslettera!</h3>
+            <p>
+              Odbieraj najnowsze oferty, nowości i 10% rabatu na pierwsze
+              zamówienie.
+            </p>
+            <form class="newsletter-tile-form">
+              <input
+                type="email"
+                id="newsletter-email-tile"
+                name="newsletter-email"
+                required
+                placeholder="Wpisz swój e-mail..."
+              />
+              <button type="submit" class="btn">ZAPISZ MNIE</button>
+            </form>
+            <div class="consent">
+              <input
+                type="checkbox"
+                id="consent-tile"
+                name="consent-tile"
+                required
+              />
+              <label for="consent-tile">
+                Akceptuję
+                <a href="#">Politykę Prywatności</a>.
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer section" id="contact">
+      <div class="footer__column">
+        <h4 class="footer__heading">Sashirō Sushi</h4>
+        <p>Autentyczny Smak Japonii.<br />Tradycja, precyzja, jakość.</p>
+        <div class="footer__payments-icons">
+          <i class="fab fa-cc-visa" title="Visa"></i>
+          <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+          <i class="fab fa-cc-paypal" title="PayPal"></i>
+          <span class="blik-icon" title="Blik">BLIK</span>
+        </div>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__heading">Linki</h4>
+        <ul class="footer__list">
+          <li><a href="#hero" class="footer__list-link">Home</a></li>
+          <li><a href="#about" class="footer__list-link">O Nas</a></li>
+          <li><a href="#menu-sections" class="footer__list-link">Menu</a></li>
+          <li>
+            <a href="#contact-reservation" class="footer__list-link"
+              >Rezerwacja</a
+            >
+          </li>
+          <li><a href="#service" class="footer__list-link">Lokalizacje</a></li>
+          <li><a href="#contact-info" class="footer__list-link">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__heading">Kontakt i Godziny</h4>
+        <ul class="footer__list">
+          <li>
+            <a href="mailto:kontakt@sashiro.pl" class="footer__list-link"
+              >kontakt@sashiro.pl</a
+            >
+          </li>
+          <li>
+            <a href="tel:+48123456789" class="footer__list-link"
+              >+48 123 456 789</a
+            >
+          </li>
+          <li>ul. Długa 10, 00-001 Miasto</li>
+        </ul>
+        <div class="footer__hours">
+          <p><span class="colored">Godziny otwarcia:</span></p>
+          <p>Pon-Pt: 12:00 - 22:00</p>
+          <p>Sob-Nd: 13:00 - 23:00</p>
+        </div>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__heading">Informacje Prawne</h4>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__list-link">Regulamin</a></li>
+          <li>
+            <a href="#" class="footer__list-link">Polityka Prywatności</a>
+          </li>
+          <li><a href="#" class="footer__list-link">Dostawa i Płatności</a></li>
+        </ul>
+        <h4 class="footer__heading">Social Media</h4>
+        <div>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+    <div class="author-info">
+      <a
+        href="mailto:monikapixiart@gmail.com?subject=Wiadomość ze strony Pixiart"
+      >
+        <p>webmaster @Monika pixsiart</p>
+      </a>
+      <a href="https://pixiart.pl" target="_blank"><p>pixiart.pl</p></a>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
